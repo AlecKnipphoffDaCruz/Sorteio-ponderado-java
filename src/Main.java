@@ -1,8 +1,11 @@
+import java.lang.reflect.Array;
 import java.util.List;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+
+        Logic logic = new Logic();
 
         User user1 = new User("user1", setor.TI, 10, 4);
         User user2 = new User("user2", setor.TI, 3,1);
@@ -19,7 +22,12 @@ public class Main {
         users.add(user4);
         users.add(user5);
         users.add(user6);
-        Ingresso NovoEvento = new Ingresso("Evento", 4, 2, 2);
+
+
+
+
+        int[] array = logic.quantidadeParaCada(9, 3, 3);
+        Ingresso NovoEvento = new Ingresso("Evento", 9,array[0], array[1]);
 
         List<User> escolhidos = NovoEvento.usersEscolhidos(users);
 
