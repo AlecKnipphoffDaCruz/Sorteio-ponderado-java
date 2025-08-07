@@ -47,11 +47,9 @@ public class Ingresso {
         List<User> sorteados = new ArrayList<>();
         Random random = new Random();
 
-        // Cópia da lista para não sortear duas vezes o mesmo
         List<User> copia = new ArrayList<>(candidatos);
 
         for (int i = 0; i < quantidade && !copia.isEmpty(); i++) {
-            // Calcular peso total
             float somaPesos = (float) copia.stream().mapToDouble(u -> u.indice).sum();
 
             float r = random.nextFloat() * somaPesos;
